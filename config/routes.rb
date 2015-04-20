@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'flats/index'
+
+  get 'flats/show'
+
+  get 'flats/new'
+
+  get 'flats/create'
+
+  get 'flats/edit'
+
+  get 'flats/update'
+
+  get 'flats/destroy'
+
+  get 'flats/resources'
+
   get 'users/new'
 
   get 'users/create'
