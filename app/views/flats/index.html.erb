@@ -1,2 +1,18 @@
-<h1>Flats#index</h1>
-<p>Find me in app/views/flats/index.html.erb</p>
+<div class="container-fluid">
+  <div class="row padded text-center">
+    <h1>Flats</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row"style="padding-left: 80px">
+      <% @flats.each do |flat|%>
+        <div class="col-xs-6 text-center padding-text cocktail-container">
+          <div class="row text-center cocktail-padding">
+            <%= flat.name %>
+            <%= flat.description %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+
+</div>
