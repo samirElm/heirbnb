@@ -1,6 +1,10 @@
 module Account
   class FlatsController < Account::BaseController
 
+    def index
+      @flats = current_user.flats.all
+    end
+
     def new
       @flat = current_user.flats.build
     end

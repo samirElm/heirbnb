@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row text-center">
+    <h1>Welcome to your flat list</h1>
+    <div class="col-md-3 text-left padded-top bold">
+        <p> My account  </p>
+        <p> My bookings </p>
+    </div>
+    <div class="col-md-9">
+      <% @flats.each do |flat| %>
+        <div class="row border-col">
+          <div class="col-xs-3">
+            <div class="placeholder padding-card-elements">
+              <%= link_to flat_path(flat) do %>
+                <%= image_tag('http://placehold.it/140x100') %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-xs-9 text-left">
+            <%= link_to flat_path(flat), class: "text-success" do %>
+              <h2> <%= flat.title %>, <%= flat.city %> </h2>
+            <% end %>
+            <p><%= flat.description %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
