@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row padded text-center">
+    <h1>Your new flat</h1>
+    <p>Name your flat, fill a description </p>
+  </div>
+
+<div class="container">
+  <%= simple_form_for(@flat, url: account_flats_path, html: { multipart: true }) do |form| %>
+    <div class="row padded text-center">
+      <%= form.input :title %>
+      <%= form.input :description %>
+      <%= form.input :city %>
+      <%= form.input :capacity %>
+    </div>
+    <div class="row text-center">
+      <%= form.submit "Add", :class => "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
