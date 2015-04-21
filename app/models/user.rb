@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar,
     content_type: /\Aimage\/.*\z/
 
-  # validates :firstname, presence: true
+  validates :firstname, presence: true
   # validates :lastname,  presence: true
   validates :email,     presence: true, uniqueness: true
 end
