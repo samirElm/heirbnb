@@ -1,5 +1,28 @@
+.footer-social-links {
+  color: white;
+  transition: all 0.3s ease;
+
+  &:hover{
+    text-shadow: 0px 0px 2px white;
+    transform: scale(1.1);
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+.footer-links a{
+  color: white;
+}
+
+#logo{
+  width: 250px;
+  text-align: left;
+}
+
+
 .footer-distributed{
-  background-color: #292c2f;
+  background-color: $darkblue;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -25,20 +48,11 @@
 
 /* The company logo */
 
-.footer-distributed h3{
-  color:  #ffffff;
-  font: normal 36px 'Cookie', cursive;
-  margin: 0;
-}
-
-.footer-distributed h3 span{
-  color:  #5383d3;
-}
 
 /* Footer links */
 
 .footer-distributed .footer-links{
-  color:  #ffffff;
+  color:  white;
   margin: 20px 0 12px;
   padding: 0;
 }
@@ -47,7 +61,7 @@
   display:inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color:  inherit;
+  color:  white;
 }
 
 .footer-distributed .footer-company-name{
@@ -129,13 +143,11 @@
 
 .footer-distributed .footer-icons a{
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  background-color:  #33383b;
-  border-radius: 2px;
 
-  font-size: 20px;
+  font-size: 30px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
