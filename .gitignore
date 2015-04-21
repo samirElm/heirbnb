@@ -14,4 +14,8 @@
 
 # Ignore application configuration
 /config/application.yml
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9fb394bfbac27916033c1a06a0f5b64c7b69647d
 /.DS_Store
