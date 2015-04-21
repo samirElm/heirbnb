@@ -1,6 +1,7 @@
 class Flat < ActiveRecord::Base
   belongs_to :user
-  has_many :bookings, dependent: :destroy
+  has_many :flat_images, dependent: :destroy
+  has_many :bookings,    dependent: :destroy
 
   validates :user,        presence: true
   validates :title,       presence: true
