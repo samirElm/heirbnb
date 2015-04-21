@@ -1,2 +1,15 @@
-<h1>Flats#edit</h1>
-<p>Find me in app/views/flats/edit.html.erb</p>
+<div class="container text-center">
+  <h1>Edit your flat</h1>
+  <%= simple_form_for(@flat, url: account_flat_path, html: { multipart: true }) do |form| %>
+    <div class="row padded text-center">
+      <%= form.input :title %>
+      <%= form.input :description %>
+      <%= form.input :city %>
+      <%= form.input :capacity %>
+    </div>
+    <div class="row text-center">
+      <%= form.submit "Change", :class => "btn btn-primary", data: { confirm: "Are you sure?" }%>
+    </div>
+  <% end %>
+</div>
+
