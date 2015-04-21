@@ -1,5 +1,10 @@
-<div class="container">
-  <h2>Log in</h2>
+<div class="container" id='form-sign'>
+
+  <div class="text-center">
+    <%= render 'devise/shared/facebook' %>
+    <p>- or -</p>
+    <h2>Log in</h2>
+  </div>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-group">
