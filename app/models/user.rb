@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
     content_type: /\Aimage\/.*\z/
 
   validates :firstname, presence: true
-  # validates :lastname,  presence: true
+  validates :lastname,  presence: true
   validates :email,     presence: true, uniqueness: true
 end
