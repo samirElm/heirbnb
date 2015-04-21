@@ -11,7 +11,7 @@
           <div class="col-xs-3">
             <div class="placeholder padding-card-elements">
               <%= link_to flat_path(flat) do %>
-                <%= image_tag('http://placehold.it/140x100') %>
+                <%= image_tag flat.flat_images.first.picture.url(:medium) %>
               <% end %>
             </div>
           </div>

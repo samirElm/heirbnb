@@ -6,6 +6,14 @@
       <%= form.input :description %>
       <%= form.input :city %>
       <%= form.input :capacity %>
+      <%= form.fields_for :flat_images do |builder| %>
+        <% if builder.object.new_record? %>
+          <p>
+          <%= builder.label :picture, "Image File" %>
+          <%= builder.file_field :picture %>
+          </p>
+        <% end %>
+      <% end %>
     </div>
     <div class="row text-center">
       <%= form.submit "Change", :class => "btn btn-primary", data: { confirm: "Are you sure?" }%>
