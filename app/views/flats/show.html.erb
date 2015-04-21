@@ -1,2 +1,16 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+
+<div class="container-fluid text-center">
+  <img src="http://placehold.it/1200X600">
+</div>
+
+<div class="container text-center padded">
+  <div class="row">
+    <h1><%= @flat.title %></h1>
+    <p><%= @flat.city %> - Capacity: <%= @flat.capacity %> </p>
+  </div>
+  <div class="row">
+    <h4><%= @flat.description %></h4>
+  </div>
+</div>
+
+
