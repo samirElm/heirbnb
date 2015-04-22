@@ -1,6 +1,6 @@
 class FlatsController < ApplicationController
   def index
-    @flats = Flat.all
+    @flats = Flat.where("city = ? AND capacity >= ?", params[:city], params[:guests])
   end
 
   def show
