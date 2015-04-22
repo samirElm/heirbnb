@@ -10,7 +10,11 @@
       </button>
       <%= link_to "/home" do %>
         <a class="navbar-brand" href="/">
+          <% if request.url == ('http://localhost:3000/' || 'https://heirbnb-lewagon.herokuapp.com/') %>
             <%= image_tag "logo.png" %>
+          <% else %>
+            <%= image_tag "logopinkg.svg" %>
+          <% end %>
         </a>
       <% end %>
     </div>
@@ -26,7 +30,7 @@
           </li>
           <li class="dropdown">
             <%= link_to "#", {class: "dropdown-toggle", "data-toggle" => "dropdown", "role" => "button", "aria-expanded" => "false"} do %>
-              <%= image_tag "http://placehold.it/30x30", class: "img-avatar" %>
+              <%= image_tag current_user.picture, class: "img-avatar" %>
               Profile <span class="caret"></span>
             <% end %>
             <ul class="dropdown-menu" role="menu">

@@ -1,8 +1,32 @@
-#homepage {
-
+#pages_home > .navbar-wagon {
+  background: transparent;
+  .navbar-nav > li > a,
+  .navbar-nav > .open > a,
+  .navbar-nav > li > a:focus,
+  .navbar-nav > .open > a:focus {
+    color: white;
+  }
+  .navbar-nav > li > a:hover,
+  .navbar-nav > .open > a:hover {
+    color: $navbar-hover-color;
+  }
+  .navbar-nav > li > a.btn {
+    line-height: $navbar-btn-height;
+    padding: 0 $navbar-btn-horizontal-padding;
+    color: $navbar-btn-color;
+    border-radius: $navbar-btn-radius;
+    margin-top: ($navbar-height + 2 * $navbar-vertical-padding - $navbar-btn-height) / 2;
+    font-weight: bold;
+    background-color: $navbar-btn-bg;
+    font-size: 12px;
+    &:hover{
+      background-color: darken($navbar-btn-bg, 30%);
+    }
+  }
 }
-#homepage h1 {
-  padding: 250px;
+
+#pages_home {
+  padding-top: 0px;
 }
 
 #banner-bg-home{
