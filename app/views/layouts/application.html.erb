@@ -9,9 +9,8 @@
     <%= csrf_meta_tags %>
   </head>
   <body id="<%= "#{controller_path.gsub('/', '_')}_#{action_name}" %>">
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-info") %>
-    <% end %>
+
+    <%= render 'layouts/notice' %>
 
     <%= render 'layouts/navbar' %>
 
