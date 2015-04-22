@@ -10,16 +10,16 @@
           <h2>There is no flats for now !</h2>
         </div>
       <% else %>
-        <div class="col-xs-8 text-center">
+        <div class="col-xs-12 col-sm-8 col-md-8 text-center">
           <% @flats.each do |flat| %>
             <%= link_to flat_path(flat) do %>
-              <div class="col-xs-6 text-center flat-card">
+              <div class="col-xs-6 text-center flat-card padding-card-elements">
                 <div class="row text-center">
                   <%= image_tag flat.flat_images.first.picture.url(:medium) %>
                 </div>
                 <div class="row">
                   <div class="col-xs-3">
-                    <%= image_tag flat.user.picture, class: "img-circle reverse-margin" %>
+                    <%= image_tag flat.user.picture, class: "img-circle reverse-margin img-border" %>
                   </div>
                   <div class="col-xs-6 padding-top">
                     <p><%= flat.title %></p>
@@ -30,6 +30,9 @@
               </div>
             <%end%>
           <%end%>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+
         </div>
       <%end%>
     </div>
