@@ -1,0 +1,11 @@
+
+  <%= simple_form_for(@booking, url: account_bookings_path, html: { multipart: true }) do |form| %>
+    <div class="padded text-center">
+      <input type="date" class="form-control" id="check_infield" name="check_in" placeholder="Check In">
+      <input type="date" class="form-control" id="check_outfield" name="check_out" placeholder="Check Out">
+      <input type="hidden" name="flat_id" value="<%= @flat_id %>">
+    </div>
+    <div class="row text-center">
+      <%= form.submit "Add", :class => "btn btn-primary" %>
+    </div>
+  <% end %>
