@@ -1,3 +1,4 @@
+// Override the style of the navbar
 #pages_home > .navbar-wagon {
   background: transparent;
   .navbar-nav > li > a,
@@ -62,6 +63,11 @@
 
 #text-card-padded{
   padding-top: 130px;
+}
+
+.title-padded {
+  padding-top: 2em;
+  padding-bottom: 4em
 }
 
 #paris-city-card{
