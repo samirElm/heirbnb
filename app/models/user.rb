@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   has_many :bookings, dependent: :destroy
 
   has_attached_file :picture,
-    styles: { medium: "150x150>", thumb: "80x80>" }
+    styles: {large: "200x200>", medium: "150x150>", thumb: "80x80>" }
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/

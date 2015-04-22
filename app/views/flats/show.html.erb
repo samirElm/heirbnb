@@ -6,7 +6,7 @@
     </div>
     <div class="col-lg-8">
       <div class="col-md-3" id="top-padded">
-        <%= image_tag @flat.user.picture, class: "img-circle" %>
+        <%= image_tag @flat.user.picture.url(:medium), class: "img-circle" %>
         <p> <%= @flat.user.firstname %></p>
       </div>
       <div class="col-md-9 text-left">
