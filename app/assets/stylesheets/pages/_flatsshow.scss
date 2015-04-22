@@ -1,0 +1,40 @@
+#flats_show {
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #summary {
+    background-color: white;
+    border-bottom: solid thin #c6c6c6;
+  }
+
+  .row {
+    margin-right: -12.5px;
+    margin-left: -12.5px;
+    padded-left: 30px;
+  }
+  .flat-banner{
+    color: white;
+    width:100%;
+  }
+
+  .border-col {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c6c6c6;
+    background-color:#F5F5F5;
+    margin-bottom: 5px;
+  }
+
+  #top-padded{
+    padding-top: 20px;
+  }
+
+  #description-padded{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
