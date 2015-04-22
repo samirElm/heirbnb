@@ -3,6 +3,24 @@
   h2 {
     font-size: 15px;
     font-weight: bold;
+    color: $gray-light;
+  }
+
+  p {
+    color: $gray;
+  }
+
+  #img-account-flats-index {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .opacity-effect {
+    opacity: 0.8;
+    &:hover {
+      transition: all 0.2s ease;
+      opacity: 1;
+    }
   }
 
   .border-col {

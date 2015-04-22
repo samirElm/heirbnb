@@ -7,21 +7,19 @@
     </div>
     <div class="col-md-9">
       <% @flats.each do |flat| %>
-        <div class="row border-col">
-          <div class="col-xs-3">
-            <div class="placeholder padding-card-elements">
-              <%= link_to flat_path(flat) do %>
+        <%= link_to flat_path(flat) do %>
+          <div class="row border-col opacity-effect">
+            <div class="col-xs-3">
+              <div id='img-account-flats-index'>
                 <%= image_tag flat.flat_images.first.picture.url(:small) %>
-              <% end %>
+              </div>
+            </div>
+            <div class="col-xs-9 text-left">
+              <h2> <%= flat.title %>, <%= flat.city %> </h2>
+              <p><%= flat.description %></p>
             </div>
           </div>
-          <div class="col-xs-9 text-left">
-            <%= link_to flat_path(flat), class: "text-success" do %>
-              <h2> <%= flat.title %>, <%= flat.city %> </h2>
-            <% end %>
-            <p><%= flat.description %></p>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
