@@ -1,5 +1,12 @@
-<div class="map_box">
-  <p><strong><%= flat.title.first(30) %>...</strong><br>
-  Capacity: <%= flat.capacity %> people</p>
-  <%= link_to "More details", flat, class: 'btn btn-success', id: 'btn-map-box' %>
+<div id="map_box">
+  <%= image_tag flat.flat_images.first.picture.url(:medium), style: 'width: 80%;' %>
+  <div class="row element-padding">
+    <div class="col-xs-6">
+      <p><strong><%= flat.title.first(30) %>...</strong><br>
+      Capacity: <%= flat.capacity %> people</p>
+    </div>
+    <div class="col-xs-6">
+      <%= link_to "More details", flat, class: 'btn btn-success', id: 'btn-map-box' %>
+    </div>
+  </div>
 </div>

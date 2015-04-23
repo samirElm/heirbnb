@@ -81,8 +81,8 @@
     }
 
 }
-.map-box {
-  padding: 10px;
+#map-box {
+  padding: 0px;
   p {
     line-height: 12px;
   }
@@ -125,6 +125,10 @@
 
 .padding-text {
   padding: 10em;
+}
+
+.element-padding {
+  padding-top: 5px;
 }
 
 
