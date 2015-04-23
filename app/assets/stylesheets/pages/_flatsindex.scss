@@ -89,6 +89,38 @@
 }
 // end of map as sidebar
 
+// Override the style of the footer
+#flats_index {
+  .footer-social-links {
+    color: white;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+
+    &:hover {
+      transform: scale(1.1);
+      text-decoration: none;
+      color: white;
+      opacity: 1;
+    }
+  }
+
+  #logo {
+    width: 60px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
+
+
+  .footer-distributed{
+    background-color: #303232;
+    font: bold 24px sans-serif;
+    padding: 15px 0px;
+    margin-top: 80px;
+  }
+  #text-footer {
+    padding-right: 448px;
+  }
+}
 
 
 
