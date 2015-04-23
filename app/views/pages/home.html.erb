@@ -60,20 +60,23 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.datepicker').datepicker();
-    $('.input-daterange').datepicker({
-      startDate: "04/24/2015",
-      todayBtn: "linked",
-      clearBtn: true,
-      multidate: false,
-      daysOfWeekDisabled: "0",
-      calendarWeeks: true,
-      todayHighlight: true
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+      $('.datepicker').datepicker();
+      $('.input-daterange').datepicker({
+        startDate: "04/24/2015",
+        todayBtn: "linked",
+        clearBtn: true,
+        multidate: false,
+        daysOfWeekDisabled: "0",
+        calendarWeeks: true,
+        todayHighlight: true
+      });
     });
-  });
-</script>
+  <% end %>
+<% end %>
+
 
 
 
