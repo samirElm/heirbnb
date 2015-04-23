@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   resources :users, only: [:show]
-
+  #routes liées à un appartement
   resources :flats, only: [:index, :show] do
     resources :bookings, only: [:new, :edit, :update, :destroy]
   end
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     resources :flats
     resources :bookings, only: [:index, :create]
   end
+
+  resources :bookings, only: [:index]
 
   get 'pages/home'
 

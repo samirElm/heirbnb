@@ -1,0 +1,15 @@
+<h1>My flat reservations (owner)</h1>
+<div class="container-fluid">
+<% @bookings.each do |booking| %>
+  <div class="row">
+    <p>The booking id: <%= booking.id %></p>
+    <p>The user_id: <%= booking.user_id %></p>
+    <p>The user picture: <%=image_tag booking.user.picture %></p>
+
+    <p>The flat_id: <%= booking.flat_id %></p>
+    <p>The flat: <%= booking.created_at %></p>
+
+
+  </div>
+<% end %>
+</div>
