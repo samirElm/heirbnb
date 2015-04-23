@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4"></div>
+    <div class="col-xs-12 col-sm-4 text-center flat-card">
+      <h3>Booking</h3>
+      <div class="padding-card-elements">
+        <div class="row text-center">
+          <%= image_tag @booking.flat.flat_images.first.picture.url(:medium) %>
+        </div>
+        <div class="row padding-top">
+          <div class="col-xs-3">
+            From:
+            <%= image_tag @booking.user.picture, class: "img-circle img-border" %><br>
+            <%= @booking.user.firstname %>
+          </div>
+          <div class="col-xs-9">
+            <p>Check-in: <%= @booking.check_in %></p>
+            <p>Check-out: <%= @booking.check_out %></p>
+            <% if @booking.accepted %>
+              <p>Status: Accepted</p>
+            <% else %>
+              <p>Status: pending or declined</p>
+              <%= link_to 'Accept this booking', class: 'btn btn-succes' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4"></div>
+  </div>
+</div>
+
+<!-- Scipt js for the update of the accepted field of the booking -->
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      $( ".accept-booking" ).click(function() {
+        <% @booking.accepted = true %>;
+        <% @booking.save %>;
+      });
+    });
+  <% end %>
+<% end %>
