@@ -1,15 +1,25 @@
 <h1>My flat reservations (owner)</h1>
 <div class="container-fluid">
-<% @bookings.each do |booking| %>
   <div class="row">
-    <p>The booking id: <%= booking.id %></p>
-    <p>The user_id: <%= booking.user_id %></p>
-    <p>The user picture: <%=image_tag booking.user.picture %></p>
+    <% @booking_array = [] %>
 
-    <p>The flat_id: <%= booking.flat_id %></p>
-    <p>The flat: <%= booking.created_at %></p>
-
-
+    <% @bookings.each_with_index do |booking, index| %>
+      <div class="col-xs-12 col-sm-4">
+        <h3>Booking n°<%= index + 1%></h3>
+        <p>The booking id: <%= booking.id %></p>
+        <% @booking = booking %>
+        <p>The user_id: <%= booking.user_id %></p>
+        <p>The user picture: <%=image_tag booking.user.picture %></p>
+        <p>The flat_id: <%= booking.flat_id %></p>
+        <p>Accepted: <%= booking.accepted %></p>
+        <p>Date of creation: <%= booking.created_at %></p>
+         <%= link_to 'See this booking', booking_path(booking) %>
+         <!-- <form action="/bookings">
+            <input type="submit" value='Accept this request' class='btn btn-success'>
+         </form> -->
+      </div>
+    <% end %>
   </div>
-<% end %>
 </div>
+
+

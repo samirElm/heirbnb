@@ -1,10 +1,5 @@
 class BookingsController < ApplicationController
 
-  # def index
-  #   @bookings = Booking.where(:flat_id == params[:flat_id])
-
-  # end
-
   def index
     @bookings = []
     current_user.flats.each do |f|
@@ -14,29 +9,26 @@ class BookingsController < ApplicationController
         end
       end
     end
-
    @bookings
   end
-     #  flat_id_array = []
-     #  current_user.flats.each do |flat|
-     #    flat_id_array << flat.id
-     #    raise
-     #  end
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
-     #  @bookings = Booking.where(:flat_id => current_user.flats)
-
-
-     #  if id_array.indclude? :flat_id
-     #    @bookings << Booking.where(:flat_id)
-     #    # @bookings = Booking.all
-
-     # raise
+  # def edit
+  #   @booking = Booking.find(params[:id])
   # end
 
-  # def index
-  #   @bookings = Booking.where( == current_user.id)
+  # def update
+  #   @booking = Booking.find(params[:id])
+  #   @booking.accepted = false
+  #   @booking.save
+  #   flash[:notice] = 'booking was successfully accepted.'
+  #   redirect_to bookings_path
+  # end
 
+  # def create
   # end
 
   def new
@@ -46,8 +38,7 @@ class BookingsController < ApplicationController
 
   private
 
-  # TODO : add strong params to create
   # def booking_params
-  #   params.require(:booking).permit(:check_out, :check_in)
+  #   params.require(:booking).permit(:accepted)
   # end
 end
