@@ -77,4 +77,6 @@ gem "rails-assets-underscore"
 
 gem 'bootstrap-datepicker-rails'
 
+gem 'activeadmin', github: 'activeadmin'
+
 
