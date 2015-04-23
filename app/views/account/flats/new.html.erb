@@ -10,7 +10,7 @@
     <div class="row padded text-center">
       <%= form.input :title %>
       <%= form.input :description %>
-      <%= form.input :city %>
+      <%= form.input :address %>
       <%= form.input :capacity, as: :select, collection: [1, 2, 3, 4, 5] %>
       <%= form.fields_for :flat_images do |builder| %>
         <% if builder.object.new_record? %>

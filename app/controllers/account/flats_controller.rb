@@ -12,7 +12,7 @@ module Account
 
     def create
       @flat = current_user.flats.build(flat_params)
-      @flat.city = @flat.city.capitalize
+      # @flat.city = @flat.city.capitalize
       if @flat.save
         redirect_to flat_path(@flat)
       else
@@ -46,7 +46,7 @@ module Account
     private
 
     def flat_params
-      params.require(:flat).permit(:title, :description, :city, :capacity, :price,flat_images_attributes: [:picture])
+      params.require(:flat).permit(:title, :description, :address, :latitude, :longitude, :capacity, :price, flat_images_attributes: [:picture])
     end
   end
 end
