@@ -1,19 +1,8 @@
-<div class="container-fluid">
-  <div class="row text-center">
-    <h1>Add your new flat</h1>
-    <p>(feel free to add an awesome description to your flat!) </p>
-  </div>
-</div>
-
-<div class="container text-center">
-  <div class="row">
-    <div class="col-xs-3"></div>
-    <div class="col-xs-6">
-      <%= simple_form_for(@flat, url: account_flats_path, html: { multipart: true }) do |form| %>
+<%= simple_form_for(@flat, url: account_flats_path, html: { multipart: true }) do |form| %>
         <div class="row padded text-center">
           <%= form.input :title, placeholder: 'Cosy flat near Bastille'%>
           <%= form.input :description, placeholder: 'A lovely bright flat in Paris 17th. Amazing location and all the shops and cafes at one minute.'%>
-          <%= form.input :address, placeholder: '25 rue du petit musc, Paris'%>
+          <%= form.input :address, id: 'user_input_autocomplete_address', placeholder: 'Start typing your address here...'%>
           <%= form.input :capacity, as: :select, collection: [1, 2, 3, 4, 5] %>
           <%= form.fields_for :flat_images do |builder| %>
             <% if builder.object.new_record? %>
@@ -28,9 +17,3 @@
           <%= form.submit "Add", :class => "btn btn-primary" %>
         </div>
       <% end %>
-      <div class="col-xs-3"></div>
-    </div>
-  </div>
-</div>
-
-

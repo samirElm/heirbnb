@@ -1,41 +1,94 @@
 #flats_index{
 
-h1 {
-  padding-bottom: 55px;
-  color: $darkblue
-}
+  h1 {
+    padding-bottom: 20px;
+    color: $darkblue
+  }
 
-p{
-  color:grey;
-}
+  p{
+    color:grey;
+  }
 
-.flat-card {
-  height: 340px;
-  width: auto;
-  background-color: white;
-  border: 1px solid white;
-  margin: 10px;
-  border-radius: 5px;
-}
+  .flat-card {
+    height: auto;
+    width: auto;
+    background-color: white;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 5px;
+  }
 
-.padding-card-elements{
-  padding-bottom: 5px;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
+  .padding-card-elements{
+    padding: 5px;
+  }
 
-.reverse-margin{
-  margin-top: -45px;
-}
+  .reverse-margin{
+    margin-top: -45px;
+  }
 
 
-.img-border{
-  border: 1px white solid;
+  .img-border{
+    border: 1px white solid;
+  }
+
+  .padding-top{
+    padding-top:10px;
+  }
 }
 
-.padding-top{
-  padding-top:10px;
+// map as sidebar
+#wrapper {
+  padding-right: 448px;
+  transition: all 0.4s ease 0s;
 }
 
+#sidebar-wrapper-map {
+  // margin-right: -250px;
+  right: 0px;
+  top: 71px;
+  width: 448px;
+  background: #000;
+  position: fixed;
+  height: 1000px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
 }
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-right: 0;
+    }
+
+    #sidebar-wrapper-map {
+      right: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      right: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      right: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+}
+.map-box {
+  padding: 10px;
+  p {
+    line-height: 12px;
+  }
+}
+// end of map as sidebar
+
+
+
+
