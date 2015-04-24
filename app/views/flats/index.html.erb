@@ -30,6 +30,11 @@
                     <p>Capacity: <strong><%= flat.capacity%></strong> people</p>
                     <p><%= flat.city%></p>
                   </div>
+                  <div class="col-xs-3">
+                    <div class="price-background reverse-margin-price">
+                      <%= flat.price_cents %>$
+                    </div>
+                  </div>
                 </div>
               </div>
             <%end%>

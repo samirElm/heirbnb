@@ -10,7 +10,7 @@
         <p> <%= @flat.user.firstname %></p>
       </div>
       <div class="col-md-8 text-left">
-        <h2><strong> <%= @flat.title.first(30) %>... </strong></h2>
+        <h2><strong> <%= @flat.title.first(30) %> </strong></h2>
         <p> <%= @flat.city %> </p>
       </div>
       <div class="col-md-2 price-padded">
@@ -24,7 +24,7 @@
         </div>
         <div class="row rent-padded">
           <% if current_user.id != @flat.user_id %>
-            <%= link_to "Rent this flat", new_flat_booking_path(@flat), class: "btn btn-primary" %>
+            <%= link_to "Rent this flat", new_flat_booking_path(@flat), class: "btn btn-primary"%>
           <% else %>
             <%= link_to "Delete this flat", account_flat_path(@flat), method: :delete, class: "btn btn-danger" %>
           <% end %>
@@ -62,7 +62,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="btn-margin">
   <% if current_user.id != @flat.user_id %>
     <%= link_to "Rent this flat", new_flat_booking_path(@flat), class: "btn btn-primary" %>
   <% end %>
