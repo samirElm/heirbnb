@@ -4,7 +4,7 @@
     <title>MyBnB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all'%>
 
     <%= csrf_meta_tags %>
   </head>
@@ -18,11 +18,12 @@
 
     <%= render 'layouts/footer' %>
 
-    <%= javascript_include_tag "https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAqeHaP6LzGmUu7S5FmRoFO3hagoQbNgGU" %>
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyAqeHaP6LzGmUu7S5FmRoFO3hagoQbNgGU" %>
     <%= javascript_include_tag "https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
 
     <%= javascript_include_tag "application" %>
 
     <%= yield(:after_js) %>
+
   </body>
 </html>

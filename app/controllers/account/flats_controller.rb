@@ -12,7 +12,7 @@ module Account
 
     def create
       @flat = current_user.flats.build(flat_params)
-      # @flat.city = @flat.city.capitalize
+      @flat.address = params[:address]
       if @flat.save
         redirect_to flat_path(@flat)
       else

@@ -75,4 +75,8 @@ gem "geocoder"
 gem "gmaps4rails"
 gem "rails-assets-underscore"
 
+gem 'bootstrap-datepicker-rails'
+
+gem 'activeadmin', github: 'activeadmin'
+
 

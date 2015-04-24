@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  ActiveAdmin.routes(self)
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   resources :users, only: [:show]
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :create, :destroy]
   end
 
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :show]
 
   get 'pages/home'
 

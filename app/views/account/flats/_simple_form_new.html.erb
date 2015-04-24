@@ -1,0 +1,26 @@
+<%= simple_form_for(@flat, url: account_flats_path, html: { multipart: true }) do |form| %>
+  <div class="row padded text-center">
+    <%= form.input :title, placeholder: 'Cosy flat near Bastille'%>
+    <%= form.input :description, placeholder: 'A lovely bright flat in Paris 17th. Amazing location and all the shops and cafes at one minute.'%>
+    <!-- <form role="form" class="form-horizontal"> -->
+      <fieldset>
+         <div class="form-group">
+          <label class="control-label">Address</label><br>
+            <input id="user_input_autocomplete_address" name="address"
+            class="form-control" placeholder="Start typing your address...">
+        </div>
+      </fieldset>
+    <%= form.input :capacity, as: :select, collection: [1, 2, 3, 4, 5] %>
+    <%= form.fields_for :flat_images do |builder| %>
+      <% if builder.object.new_record? %>
+        <p>
+        <%= builder.label :picture, "Picture" %>
+        <%= builder.file_field :picture %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="row text-center">
+    <%= form.submit "Add", :class => "btn btn-primary" %>
+  </div>
+<% end %>

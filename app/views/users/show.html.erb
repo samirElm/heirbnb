@@ -1,2 +1,36 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="container" id="padded-container">
+  <div class="row margin">
+    <div class="col-lg-3 col-md-4 sm-hide" id="top-padded">
+      <div class="row">
+        <%= image_tag @user.picture.url(:medium) %>
+      </div>
+      <div class="row" id="padded-row">
+        <%= link_to "Update your profile", edit_user_registration_path, class: "btn btn-primary " %>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-4 col-sm-9">
+      <div class="row">
+        <h1> Hi, my name is <%= @user.firstname %> ! </h1>
+        <p> Member since <%= @user.created_at.year %> </p>
+      </div>
+      <div class="row">
+        <% number_of_flats = @user.flats.count %>
+        <p> Number of flats: <%= number_of_flats %> </p>
+        <p> My bookings: <%= @user.bookings.count %> </p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-4 sm-hide" id="top-padded">
+      <div class="row" id="btn-bookings">
+        <% if number_of_flats != 0 %>
+          <%= link_to "My bookings", account_bookings_path, class: "btn btn-info " %>
+        <% end %>
+      </div>
+      <div class="row">
+        <% if number_of_flats != 0 %>
+          <%= link_to "My flats", account_flats_path, class: "btn btn-danger " %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
