@@ -16,7 +16,7 @@
       <% else %>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
           <% @flats.each do |flat| %>
-            <%= link_to flat_path(flat) do %>
+            <%= link_to flat_path(flat), target: '_blank' do %>
               <div class="col-xs-6 text-center flat-card padding-card-elements">
                 <div class="row text-center">
                   <%= image_tag flat.flat_images.first.picture.url(:medium) %>
