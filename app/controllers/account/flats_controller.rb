@@ -46,7 +46,7 @@ module Account
     private
 
     def flat_params
-      params.require(:flat).permit(:title, :description, :address, :latitude, :longitude, :capacity, :price, flat_images_attributes: [:picture])
+      params.require(:flat).permit(:title, :description, :address, :latitude, :longitude, :capacity, :price_cents, flat_images_attributes: [:picture])
     end
   end
 end
