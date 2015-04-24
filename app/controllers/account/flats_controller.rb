@@ -40,7 +40,7 @@ module Account
     def destroy
       @flat = current_user.flats.find(params[:id])
       @flat.destroy
-      redirect_to flats_path
+      redirect_to account_flats_path
     end
 
     private
