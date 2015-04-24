@@ -36,5 +36,21 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  #price-border{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c6c6c6;
+    background-color:#F5F5F5;
+    margin-top: 25px;
+  }
+
+  .price-padded {
+    margin-left: -40px;
+  }
+
+  .rent-padded {
+    padding-top: 10px;
+  }
 }
 
