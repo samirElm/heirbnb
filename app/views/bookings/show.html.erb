@@ -16,6 +16,7 @@
           <div class="col-xs-9">
             <p>Check-in: <%= @booking.check_in %></p>
             <p>Check-out: <%= @booking.check_out %></p>
+            <p>Total price: <%= @booking.price_cents %> $</p>
             <% if @booking.accepted %>
               <p>Status: Accepted</p>
             <% else %>

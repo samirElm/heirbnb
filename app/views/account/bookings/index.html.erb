@@ -20,6 +20,7 @@
       <h4><%= booking.flat.description.first(20)%>...</h4>
       <p>Check-in date : <%= booking.check_in %></p>
       <p>Check-out date: <%= booking.check_out %></p>
+      <p>Total price: <%= booking.price_cents %> $</p>
     </div>
     <div class="col-xs-12 col-sm-4">
       <% if booking.accepted %>
