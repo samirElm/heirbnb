@@ -1,11 +1,51 @@
 
-  <%= simple_form_for(@booking, url: account_bookings_path, html: { multipart: true }) do |form| %>
-    <div class="padded text-center">
-      <input type="date" class="form-control" id="check_infield" name="check_in" placeholder="Check In">
-      <input type="date" class="form-control" id="check_outfield" name="check_out" placeholder="Check Out">
+
+<div class="container-fluid padded text-center">
+  <h1>Book <%= Flat.find(@flat_id).user.firstname %>'s Flat</h1>
+    <%= image_tag booking.flat.flat_images.first.picture.url(:medium), class: "align-left", id: "photo-trip-card" %>
+</div>
+
+<div class="container padded">
+  <%= simple_form_for(@booking, url: account_bookings_path) do |form| %>
+    <div class='text-center' style= "padding-left: 200px; padding-right: 200px;">
+
+      <div class="padded">
+        <input type="date" class="form-control" id="check_infield" name="check_in" placeholder="Check In">
+      </div>
+      <div class="padded">
+        <input type="date" class="form-control" id="check_outfield" name="check_out" placeholder="Check Out">
+      </div>
+
+
+      <div class="padded">
+        <select class="form-control text-center" id="guestsfield" name="guests" placeholder="Number of guests">
+        <%= options_for_select((1..5).to_a.map { |number| [pluralize(number, 'guest'), number] }) %>
+        </select>
+      </div>
       <input type="hidden" name="flat_id" value="<%= @flat_id %>">
-    </div>
-    <div class="row text-center">
       <%= form.submit "Add", :class => "btn btn-primary" %>
     </div>
   <% end %>
+</div>
+
+
+
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+      $('.datepicker .input-daterange').datepicker({
+        todayBtn: "linked",
+        clearBtn: true,
+        multidate: false,
+        daysOfWeekDisabled: "0",
+        calendarWeeks: true,
+        todayHighlight: true,
+        dateFormat: 'yy-mm-dd'
+      });
+    });
+  <% end %>
+<% end %>
+
+
+

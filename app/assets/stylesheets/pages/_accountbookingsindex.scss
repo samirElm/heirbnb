@@ -34,7 +34,7 @@
   }
 
   .text-trip-card{
-  margin-left: 10px;
+  padding-left: 10px;
   color: $gray;
   }
 
@@ -59,12 +59,24 @@
   margin-left: 532px;
   }
 
-  .text-align{
-  position: absolute;
-  margin-top: -150px;
-  margin-left: 630px;
+  #text-padding{
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   }
+
+  #col-padding{
+    padding-top: 10px;
+  }
+
+  #row-padding{
+    padding-top: 3em;
+    padding-bottom: 1em;
+  }
+
+
+
+
 
 
 .fadeIn{
