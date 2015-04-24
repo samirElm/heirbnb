@@ -2,12 +2,15 @@
   <div class="row text-center">
     <h1>Welcome to your flat list</h1>
     <div class="col-md-3 text-left padded-top bold">
-        <%= link_to user_path(current_user) do %>
-          <p>My account</p>
-        <% end %>
-        <%= link_to account_bookings_path do %>
-          <p>My trips</p>
-        <% end %>
+      <%= link_to account_bookings_path do %>
+        <p>My trips</p>
+      <% end %>
+      <%= link_to user_path(current_user) do %>
+        <p>My account</p>
+      <% end %>
+      <%= link_to bookings_path do %>
+        <p>Bookings on my flats</p>
+      <% end %>
     </div>
     <div class="col-md-9">
       <% @flats.each do |flat| %>
@@ -19,8 +22,15 @@
               </div>
             </div>
             <div class="col-xs-9 text-left">
-              <h2> <%= flat.title %>, <%= flat.city %> </h2>
-              <p><%= flat.description %></p>
+              <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                  <h2> <%= flat.title %>, <%= flat.city %> </h2>
+                  <p><%= flat.description %></p>
+                </div>
+                <div class="col-xs-12 col-sm-4" id='btn-account-flats'>
+                  <button class='btn btn-success'>Details</button>
+                </div>
+              </div>
             </div>
           </div>
         <% end %>
