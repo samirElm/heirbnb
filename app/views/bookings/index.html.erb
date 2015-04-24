@@ -6,7 +6,7 @@
   <% end %>
   </div>
   <% @bookings.each_with_index do |booking, index| %>
-  <div class="row opacity-effect" id="trip-card" style="background: white;">
+  <div class="row" id="trip-card" style="background: white;">
     <div class="col-xs-12 col-sm-4">
       <%= image_tag booking.flat.flat_images.first.picture.url(:medium), class: "align-left", id: "photo-trip-card" %>
       <div id="photo-text-trip-card">
@@ -22,7 +22,12 @@
       <p>Check-in: <%= booking.check_in %></p>
       <p>Check-out: <%= booking.check_out %></p>
       <p>Total price: <%= booking.price_cents %> $</p>
-      <p>
+
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="row">
+        <% unless booking.accepted %>
+          <p id="text-padding", style=" text-align: center; margin-top: 48px;">
           Status:
           <% if booking.accepted %>
             Accepted
@@ -30,12 +35,11 @@
             Pending or declined
           <% end %>
         </p>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <div class="row">
-        <% unless booking.accepted %>
-          <%= link_to "Answer this request", booking_path(booking), class: "btn btn-success", id: "text-padding", style: "margin: 74px;"%>
+        <p style="text-align: center;">
+          <%= link_to "Answer this request", booking_path(booking), class: "btn btn-success", id: "text-padding", style: ""%>
         <% end %>
+        </p>
+
       </div>
     </div>
   </div>
