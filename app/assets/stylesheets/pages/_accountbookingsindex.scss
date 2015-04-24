@@ -1,0 +1,154 @@
+#account_bookings_index{
+
+
+  #trip-card {
+      background-color: white;
+      border: 1px solid white;
+      margin: 10px;
+      border-radius: 5px;
+      height: 200px;
+      width: auto;
+    }
+
+  #photo-trip-card{
+  border-radius: 5px;
+  position: absolute;
+  background-position: center bottom;
+  color: white;
+  }
+  #photo-text-trip-card{
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    margin-top: 23%;
+    color: white;
+    opacity: 1;
+  }
+
+  .opacity-effect{
+    opacity: 0.8;
+    &:hover {
+      transition: all 0.2s ease;
+      opacity: 1;
+    }
+  }
+
+  .text-trip-card{
+  margin-left: 10px;
+  color: $gray;
+  }
+
+  #validation-img{
+  position: relative;
+  background-image: image-url('validated.png');
+  margin-top: -200px;
+  margin-left: 550px;
+  }
+
+
+  #pending-img{
+  position: relative;
+  background-image: image-url('pending.png');
+  margin-top: -230px;
+  margin-left: 550px;
+
+  }
+
+  #btn-align{
+  margin-top: -57px;
+  margin-left: 532px;
+  }
+
+  .text-align{
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 630px;
+
+  }
+
+
+.fadeIn{
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+.expandUp{
+  animation-name: expandUp;
+  -webkit-animation-name: expandUp;
+
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;
+}
+
+@keyframes expandUp {
+  0% {
+    transform: translateY(100%) scale(0.8) scaleY(0.7);
+  }
+
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  }
+}
+
+@-webkit-keyframes expandUp {
+  0% {
+    -webkit-transform: translateY(100%) scale(0.8) scaleY(0.7);
+  }
+  100% {
+    -webkit-transform: translateY(0%) scale(1) scaleY(1);
+  }
+}
+
+}

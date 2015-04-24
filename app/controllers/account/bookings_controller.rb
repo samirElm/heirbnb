@@ -2,7 +2,7 @@ module Account
   class BookingsController < Account::BaseController
 
     def index
-      @bookings = Booking.all
+      @bookings = current_user.bookings.all
     end
 
     def create
@@ -13,6 +13,12 @@ module Account
       else
         render :new
       end
+    end
+
+    def destroy
+      @booking = Booking.find(params[:id])
+      @booking.destroy
+      redirect_to account_bookings_path
     end
   end
 end

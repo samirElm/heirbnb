@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   #routes liées à un appartement
   resources :flats, only: [:index, :show] do
-    resources :bookings, only: [:new, :edit, :update, :destroy]
+    resources :bookings, only: [:new, :edit, :update]
   end
 
   namespace :account do
     resources :flats
-    resources :bookings, only: [:index, :create]
+    resources :bookings, only: [:index, :create, :destroy]
   end
 
   resources :bookings, only: [:index]
