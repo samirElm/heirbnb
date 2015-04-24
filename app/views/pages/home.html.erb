@@ -63,8 +63,7 @@
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function(){
-      $('.datepicker').datepicker();
-      $('.input-daterange').datepicker({
+      $('.datepicker .input-daterange').datepicker({
         startDate: "04/24/2015",
         todayBtn: "linked",
         clearBtn: true,
