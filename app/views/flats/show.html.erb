@@ -10,7 +10,7 @@
         <p> <%= @flat.user.firstname %></p>
       </div>
       <div class="col-md-8 text-left">
-        <h2><strong> <%= @flat.title %> </strong></h2>
+        <h2><strong> <%= @flat.title.first(30) %>... </strong></h2>
         <p> <%= @flat.city %> </p>
       </div>
       <div class="col-md-2 price-padded">
