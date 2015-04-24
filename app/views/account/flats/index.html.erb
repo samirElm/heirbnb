@@ -2,8 +2,12 @@
   <div class="row text-center">
     <h1>Welcome to your flat list</h1>
     <div class="col-md-3 text-left padded-top bold">
-        <p> My account  </p>
-        <p> My reservations </p>
+        <%= link_to user_path(current_user) do %>
+          <p>My account</p>
+        <% end %>
+        <%= link_to account_bookings_path do %>
+          <p>My trips</p>
+        <% end %>
     </div>
     <div class="col-md-9">
       <% @flats.each do |flat| %>
