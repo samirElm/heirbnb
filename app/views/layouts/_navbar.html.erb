@@ -49,6 +49,13 @@
                   <i class="fa fa-plane"></i> <%= t ".profile", default: "Trips" %>
                 <% end %>
               </li>
+              <% if current_user.flats != 0 %>
+                <li>
+                  <%= link_to bookings_path do %>
+                    <i class="fa fa-calendar-o"></i> <%= t ".profile", default: "Bookings" %>
+                  <% end %>
+                </li>
+              <% end %>
               <li>
                 <%= link_to destroy_user_session_path, method: :delete do %>
                   <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Sign out" %>

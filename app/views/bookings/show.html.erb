@@ -20,7 +20,7 @@
               <p>Status: Accepted</p>
             <% else %>
               <p>Status: pending or declined</p>
-              <%= link_to 'Accept this booking', class: 'btn btn-succes' %>
+              <%= link_to 'Accept', booking_path(@booking), class: 'btn btn-success' %>
             <% end %>
           </div>
         </div>
@@ -34,7 +34,7 @@
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
-      $( ".accept-booking" ).click(function() {
+      $( "#accept-booking" ).click(function() {
         <% @booking.accepted = true %>;
         <% @booking.save %>;
       });
