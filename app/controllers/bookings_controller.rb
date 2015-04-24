@@ -33,7 +33,8 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @flat_id = (Flat.find(params[:flat_id]))[:id]
+    @flat_id = params[:flat_id]
+    @flat = Flat.find(params[:flat_id])
   end
 
   private
