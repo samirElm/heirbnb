@@ -5,15 +5,30 @@
     <div class="col-lg-2">
     </div>
     <div class="col-lg-8">
-      <div class="col-md-3" id="top-padded">
+      <div class="col-md-2" id="top-padded">
         <%= image_tag @flat.user.picture.url(:medium), class: "img-circle" %>
         <p> <%= @flat.user.firstname %></p>
       </div>
-      <div class="col-md-9 text-left">
+      <div class="col-md-8 text-left">
         <h2><strong> <%= @flat.title %> </strong></h2>
         <p> <%= @flat.city %> </p>
       </div>
+      <div class="col-md-2 price-padded">
+        <div class="row" id="price-border">
+          <div class="row">
+            <p> Price per night: </p>
+          </div>
+          <div class="row">
+            <p> <strong><%= @flat.price_cents %> $ </strong></p>
+          </div>
+        </div>
+        <div class="row rent-padded">
+          <% if current_user.id != @flat.user_id %>
+            <%= link_to "Rent this flat", new_flat_booking_path(@flat), class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
+    </div>
   </div>
 </div>
 
