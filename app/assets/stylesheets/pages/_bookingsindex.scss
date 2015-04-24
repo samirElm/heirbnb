@@ -6,7 +6,7 @@
       border: 1px solid white;
       margin: 10px;
       border-radius: 5px;
-      height: 202px;
+      height: 200px;
       width: auto;
     }
 
@@ -23,6 +23,14 @@
     margin-top: 23%;
     color: white;
     opacity: 1;
+  }
+
+  .opacity-effect{
+    opacity: 0.8;
+    &:hover {
+      transition: all 0.2s ease;
+      opacity: 1;
+    }
   }
 
   .text-trip-card{
